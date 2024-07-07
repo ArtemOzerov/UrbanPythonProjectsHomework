@@ -1,7 +1,6 @@
 numbers = range(1, 16)
-primes = []  # [2, 3, 5, 7, 11, 13]
-not_primes = []  # [4, 6, 8, 9, 10, 12, 14, 15]
-# is_prime = True  # после проверки (True - в prime, False - в not_prime).
+primes = []
+not_primes = []
 for z in numbers:
     if z == 1:
         continue

@@ -1,14 +1,12 @@
 def main():
-    first_strings = ['Elon', 'Musk', 'Programmer', 'Monitors', 'Variable']
-    second_strings = ['Task', 'Git', 'Comprehension', 'Java', 'Computer', 'Assembler']
+    first = ['Strings', 'Student', 'Computers']
+    second = ['Строка', 'Урбан', 'Компьютер']
 
-    first_result = [len(_) for _ in first_strings if len(_) >= 5]
-    second_result = [(s1, s2) for s1 in first_strings for s2 in second_strings if len(s1) == len(s2)]
-    third_result = {s: len(s) for s in first_strings + second_strings if len(s)%2==0}
+    first_result = (len(s1)-len(s2) for s1, s2 in zip(first, second) if len(s1) != len(s2))
+    second_result = (len(first[j])==len(second[j]) for j in range(len(first)))
 
-    print(first_result)
-    print(second_result)
-    print(third_result)
+    print(list(first_result))
+    print(list(second_result))
 
 if __name__ == '__main__':
     main()

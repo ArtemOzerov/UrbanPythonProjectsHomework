@@ -23,8 +23,8 @@ class Knight(Thread):
 
 def main():
     # Создание класса
-    knight1 = Knight('Алёша Попович', 15)
-    knight2 = Knight('Святогор', 20)
+    knight1 = Knight('Свофорд', 15)
+    knight2 = Knight('форест гамп', 20)
     # Запуск потоков и остановка текущего
     knight1.start()
     knight2.start()

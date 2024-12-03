@@ -24,7 +24,6 @@ class WordsFinder:
         return all_words
 
     def find(self, word):
-        '''Возвращает словарь, где ключ - название файла, значение - позиция первого такого слова в списке слов этого файла.'''
         dict_ = {}
         for fname, words in self.get_all_words().items():
             for pos, w in enumerate(words):
@@ -34,7 +33,6 @@ class WordsFinder:
         return dict_
 
     def count(self, word):
-        '''Возвращает словарь, где ключ - название файла, значение - количество слова word в списке слов этого файла.'''
         dict_ = {}
         for fname, words in self.get_all_words().items():
             counter = 0
@@ -45,17 +43,9 @@ class WordsFinder:
         return dict_
 
 def main():
-    '''Пример выполнения программы:'''
     finder2 = WordsFinder('test_file.txt', 'test_file_b.txt')
-    print(finder2.get_all_words()) # Все слова
-    print(finder2.find('TEXT')) # 3 слово по счёту
-    print(finder2.count('teXT')) # 4 слова teXT в тексте всего
-    '''
-    Вывод на консоль:
-    {'test_file.txt': ["it's", 'a', 'text', 'for', 'task', 'найти', 'везде', 'используйте', 'его', 'для', 'самопроверки', 'успехов', 'в', 'решении', 'задачи', 'text', 'text', 'text']}
-    {'test_file.txt': 3}
-    {'test_file.txt': 4}
-    '''
-
+    print(finder2.get_all_words())
+    print(finder2.find('TEXT'))
+    print(finder2.count('teXT'))
 if __name__ == '__main__':
     main()
